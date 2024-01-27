@@ -1,12 +1,56 @@
-body{
+/*softreset do css, retirando padrões de box-model do html*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
     background: url('https://img.freepik.com/free-photo/vivid-blurred-colorful-background_58702-2655.jpg?t=st=1706232024~exp=1706232624~hmac=79013aab4c4bdc84d16f265bad94ef7a91b438414a66411f37621d845eb0b9b3');
     background-size: auto 110vh;
     font-family: Comic Sans; 
     height: 100vh;
+    font-size: 12px;
   }
+
+  /*se a tela for de pelo menos 600px vai carregar os estilos*/
+  @media (min-width: 600px) {
+    body{
+        font-size: 14px;
+    }
+  }
+  /*se a tela for de pelo menos 850px vai carregar os estilos*/
+  @media (min-width: 850px) {
+    body{
+        font-size: 18px;
+    }
+  }  
+
+  header{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /*se a tela for de pelo menos 600px vai carregar os estilos*/
+  @media (min-height: 600px) {
+    header{
+        height: 33vh;
+    }
+  }
+  /*se a tela for de pelo menos 1000px vai carregar os estilos*/
+  @media (min-height: 1000px) {
+    header{
+        height: 25vh;
+    }
+  }  
   
   .menu{
     background-color: #EBEBEB;
+    position: fixed;
+    width: 100vw;
+    top: 0;
   }
   .menu ul{
     display: flex;
@@ -17,6 +61,11 @@ body{
     list-style: none;
   }
   
+  .menu a {
+    display: block;
+    padding: 10px 20px;
+  }
+
   a {
     color: #047621;
     text-decoration: none;
@@ -27,10 +76,15 @@ body{
   }
   .site-title{
     text-align: center;
-    color: #EBEBEB;
+    color: #141414;
+    font-size: 2em;
   }
   .site-subtitle{
     text-align: center;
-    color: #EBEBEB;
+    color: #141414;
     font-style: italic;
+  }
+  .img-portfolio {
+    width: 250px;
+    height: 150px;
   }
